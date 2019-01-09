@@ -26,6 +26,9 @@ all: wheel
 
 clean:
 	$(RM) $(PACKAGE_ROOT)/*.[ch]
+	$(RM) ./dist
+	$(RM) ./build
+	$(RM) ./*.egg-info
 
 copy_headers:
 	$(CP) -r $(PYCPARSER_FAKE_HEADERS_DIR)/* $(PACKAGE_ROOT)
