@@ -20,9 +20,9 @@ PYCPARSER_FAKE_HEADERS_DIR := $(PYCPARSER_ROOT)/utils/fake_libc_include
 
 PACKAGE_ROOT := $(abspath .)/pycparser_fake_libc
 
-.PHONY: all clean copy_headers wheel
+.PHONY: all clean copy_headers packages
 
-all: wheel
+all: packages
 
 clean:
 	$(RM) $(PACKAGE_ROOT)/*.[ch]
@@ -33,5 +33,5 @@ clean:
 copy_headers:
 	$(CP) -r $(PYCPARSER_FAKE_HEADERS_DIR)/* $(PACKAGE_ROOT)
 
-wheel: copy_headers
-	$(PYTHON) setup.py bdist_wheel
+packages: copy_headers
+	$(PYTHON) setup.py sdist bdist_wheel
