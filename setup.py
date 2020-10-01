@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import sys
 
 # Version should patch the pycparser submodule version
-VERSION = "v2.19"
+VERSION = "v2.20"
 
 with open("README.md", "r") as f:
     long_description = f.read()
