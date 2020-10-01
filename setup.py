@@ -5,7 +5,8 @@ import sys
 VERSION = "v2.20"
 
 with open("README.md", "r") as f:
-    long_description = f.read()
+    long_description = f.read().replace("\r", "")
+    print(long_description)
 
 setup(
     name="pycparser-fake-libc",
