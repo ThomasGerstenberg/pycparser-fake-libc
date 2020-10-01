@@ -6,14 +6,13 @@ VERSION = "v2.20"
 
 with open("README.md", "r") as f:
     long_description = f.read().replace("\r", "")
-    print(long_description)
 
 setup(
     name="pycparser-fake-libc",
     version=VERSION.lstrip("v"),  # Remove the leading v, pip doesn't like that
     description="Pip-installable package with pycparser's fake libc headers",
-    long_description=long_description,
     long_description_content_type="text/markdown",
+    long_description=long_description,
     url="https://github.com/ThomasGerstenberg/pycparser-fake-libc",
     author="Thomas Gerstenberg",
     author_email="tgerst6@gmail.com",

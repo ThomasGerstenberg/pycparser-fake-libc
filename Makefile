@@ -11,8 +11,8 @@ RM     := $(NO_ECHO)rm -rf
 CD     := $(NO_ECHO)cd
 CP     := $(NO_ECHO)cp
 TOUCH  := $(NO_ECHO)touch
-PYTHON := $(NO_ECHO)python
-PIP    := $(NO_ECHO)pip
+PYTHON := $(NO_ECHO)python3
+PIP    := $(PYTHON) -m pip
 
 
 PYCPARSER_ROOT := $(abspath .)/pycparser
